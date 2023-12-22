@@ -1,0 +1,13 @@
+{
+  "type": "service_account",
+  "project_id": "pathwell-datawarehouse",
+  "private_key_id": "52bfada53a6384a978060029efe1ad289844f528",
+  "private_key": "-----BEGIN PRIVATE KEY-----\nMIIEvQIBADANBgkqhkiG9w0BAQEFAASCBKcwggSjAgEAAoIBAQDPfCWgQkH6RyHv\nLR3kkk9JrrJEqKj/evAEJlkdeBzbpkKLg3JEhj97uPGQI+HHlhfjK+fwy8hvYYKF\nEN4Rg60weU5M4/arqQqXszZuNvze8IYlwNAIHZ/FLpTCzyQKORwZH0KhwjTT+Q89\nvoS3XoxZR7W6mg6aYxxZJkXfygkzz9O7es2CrTVZgIiDjIVASv9O+Po50HR5y45U\nlA5NCsvY6EJLSZdZf/Rq1MTNyk3GvfP/MSW7kV7suiuC4X9Hi4qULU4T0+CUv91T\nFUAaQv4Mxgz7yl4uf38aLcrT6vl7uu9ueagonpaK16mvEvOkvMu3WZxl+sMqMsG+\nZWD7ofQLAgMBAAECggEAHOGQkTq32WE+aX8TuqXdEIoXOXRqtclEkKdP30jBZ5fA\nio/8/2nae1vWkDRWcMRFRfNuITgUieB+XQxohPKZ0HYKPqy6wNFSbqRdDsFruJKt\ncaLhskeBXl6qCWXxA9VIQnz19vNEDD+Obg9PhQDNs33GX5ejMb1bDFPGBS0n08S5\nY1EpR3nauin/OUc0G/XylwnephofcIU6NMNhAU/JQpqkxKdYQ6T+xvRjYuNKM0Bf\n+7FF39p42GESQIOx++gX0DV3egvaaB+cgmnwn5hDX7cvAdydWKgyhWzWTmFRhHB8\n1sdI0vTiqSvQXZPSroxAkSS/B4PcOtLP+QMAfzn5XQKBgQDv1uP1crG7dqeNBfhC\ndy1WmDBVyxccikSn3JWs+UCQh06BxIMfL0hbBlJyvUn/JR2Z//yFyPTpG8nJDJFQ\njOZbceb6T32RX/YfbyVozE88nSfWZBDpQoz0vm1DjMuAYR6apW+VzWrzCjeO8g4T\nqjeZJXzyn8t8MxRKFaDZ+dUNHwKBgQDddyh/5nljA8Iy5GbxcR/VG/bT8W5xjXxp\nnncG/SONdfG3ra5Eju0YcmjNXP6dKb3IUpmeqtTm/w/hjgNyGq/bEHJ6c2G0Pu6g\nTDuGRepbBcdcUkfIpwns8D+otUrx2X3VX8mb+2BhijzN6AT+cazqsM5cSUuymAOa\ncpgBiROPlQKBgDgb6dCuOG5G4APZ9a52+yBbElO/43RF1LIApPOGjFhDj1ZEhvhw\ns1i4Lemx5vHN2RMCFC2oScOPQLHMQuK5U9ro1sSQfCvaa1YHRpUx1wezLHK3jk1D\nyH4pXp6C/cjW77X2JhjBqdeZ+E10y15GYCNv5b9NKumveXure6oDDJi5AoGAGxMS\nNHCsrlorR6V8oE/AIIGGr2p4ohE2AIOK8aPI0OZ2YootH9yJR8/U2CZiSjxsIy1V\n8nvYA1VzT5PY//4bOaDNHgM1EqAO9DHdpRCvEemm8bZtaC5jnD/SyIFBZEe+hnNr\nZlJY+hO4U0PmOGUVSqvKzqV3R6Il7p/LzYRAi/ECgYEAmmzmkChjJqu4YZPH3T5M\nutmLzYrC8GIZqYw5DtKq3rSXZxHqm+6ghOZtE/edewCJknpbw5X+j9x0DWalFbQ8\niqrjUsSa4OwhraotSjK+PywNAvFhqmZ7xMbfJ3Y4/P+UVH7IS3S+ceR+LFNuxa16\nqLu8hpZ6fkwcwH62zBlZ9/Q=\n-----END PRIVATE KEY-----\n",
+  "client_email": "pathwell-datawarehouse@appspot.gserviceaccount.com",
+  "client_id": "117935528402495541782",
+  "auth_uri": "https://accounts.google.com/o/oauth2/auth",
+  "token_uri": "https://oauth2.googleapis.com/token",
+  "auth_provider_x509_cert_url": "https://www.googleapis.com/oauth2/v1/certs",
+  "client_x509_cert_url": "https://www.googleapis.com/robot/v1/metadata/x509/pathwell-datawarehouse%40appspot.gserviceaccount.com",
+  "universe_domain": "googleapis.com"
+}
