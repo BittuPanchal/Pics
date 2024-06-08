@@ -12,6 +12,9 @@ import io
 
 st.title("Audio Transcription App")
 
+clinician_name = st.text_input("Enter Your Name")
+patient_mrn = st.text_input("Enter Patient MRN")
+
 audio = mic_recorder(start_prompt="Start recording", stop_prompt="Stop recording", just_once=False,
                      use_container_width=False, callback=None, args=(), kwargs={}, key=None)
 
@@ -20,6 +23,6 @@ if audio is not None:
         audio_bytes = audio['bytes']
         st.audio(audio_bytes, format='audio/wav')
 
-        filename = (datetime.datetime.now().strftime("%Y%m%d%H%M%S") + "_feedback.wav")
+        filename = f"{clinician_name}_{patient_mrn}_feedback.wav"
         with open(filename, "wb") as f:
             f.write(audio_bytes)
