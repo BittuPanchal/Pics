@@ -323,8 +323,6 @@ scrollable_content = f"""
     transition: transform 0.5s ease-in-out; /* Smooth transition for sliding effect */
     overflow-y: auto; /* Allow vertical scrolling if content exceeds height */
     position: absolute;
-    top: 0;
-    left: 0;
   }}
   
   .scrollable-content {{
