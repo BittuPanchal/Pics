@@ -363,34 +363,26 @@ scrollable_content = f"""
 # Render the scrollable content using st.markdown
 st.markdown(scrollable_content, unsafe_allow_html=True)
 
-# Buttons to navigate sections
-col1, col2 = st.columns([1, 1])
 
-# Apply CSS to ensure buttons are displayed side by side
-st.markdown("""
-    <style>
-        .stHorizontal {
-            display: flex;
-            justify-content: space-between;
-        }
-        .stHorizontal .stButton {
-            flex: 1;
-            margin: 0 5px;
-        }
-    </style>
-""", unsafe_allow_html=True)
+col1, col2 = st.columns(2)
 
-# Use a div with class stHorizontal to wrap buttons
-with st.markdown("<div class='stHorizontal'>", unsafe_allow_html=True):
-    with col1:
-        st.write("")  # Placeholder to enforce button on the left side
-        if st.button("Previous <"):
-            prev_section()
+with col1:
+    st.write("")  # Placeholder to enforce button on the left side
+    if st.button("Previous <"):
+        prev_section()
 
-    with col2:
-        st.write("")  # Placeholder to enforce button on the right side
-        if st.button("Next >"):
-            next_section()
+with col2:
+    st.write("")  # Placeholder to enforce button on the right side
+    if st.button("Next >"):
+        next_section()
 
-# Close the div
-st.markdown("</div>", unsafe_allow_html=True)
+# Add custom CSS to limit the width of the content area
+st.write('''<style>
+
+[data-testid="column"] {
+    width: calc(33.3333% - 1rem) !important;
+    flex: 1 1 calc(33.3333% - 1rem) !important;
+    min-width: calc(33% - 1rem) !important;
+}
+</style>''', unsafe_allow_html=True)
+
