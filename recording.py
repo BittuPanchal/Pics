@@ -320,6 +320,7 @@ scrollable_content = f"""
   .scrollable-item {{
     min-width: 100%;
     height: 100%;
+    margin-right: 10px; /* Adjust margin between items */
     transition: transform 0.5s ease-in-out; /* Smooth transition for sliding effect */
     overflow-y: auto; /* Allow vertical scrolling if content exceeds height */
     position: absolute;
@@ -365,6 +366,7 @@ st.markdown(scrollable_content, unsafe_allow_html=True)
 
 # Buttons to navigate sections
 col1, col2 = st.columns([1, 1])
+
 with col1:
     st.write("")  # Placeholder to enforce button on the left side
     if st.button("Previous <"):
