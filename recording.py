@@ -311,7 +311,7 @@ scrollable_content = f"""
   .scrollable-container {{
     display: flex;
     overflow: hidden;
-    width: 395px; /* Adjust to the width of one section */
+    width: 344px; /* Adjust to the width of one section */
     height: 400px; /* Adjust to the height of one section */
     position: relative;
   }}
@@ -376,13 +376,13 @@ with col2:
     if st.button("Next >"):
         next_section()
 
-# Add custom CSS to limit the width of the content area
 st.write('''<style>
-
-[data-testid="column"] {
+    [data-testid="column"] {
     width: calc(33.3333% - 1rem) !important;
     flex: 1 1 calc(33.3333% - 1rem) !important;
     min-width: calc(33% - 1rem) !important;
 }
+    [data-testid="column"]:first-child {
+    margin-right: 141px; /* Adjust the margin-right to increase or decrease the space between columns */
+}
 </style>''', unsafe_allow_html=True)
-
