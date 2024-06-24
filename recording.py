@@ -309,26 +309,30 @@ def prev_section():
 scrollable_content = f"""
   <style>
   .scrollable-container {{
-    overflow-x: auto;
-    white-space: nowrap;
+    display: flex;
+    overflow: hidden;
+    width: 400px; /* Adjust to the width of one section */
+    height: 400px; /* Adjust to the height of one section */
+    position: relative;
   }}
   
   .scrollable-item {{
-    display: inline-block;
-    vertical-align: top;
-    margin-right: 10px; /* Adjust margin between items */
-    width: 500px; /* Set a fixed width for each item */
-    max-width: 100%; /* Ensure items don't exceed container width */
-    height: 400px; /* Set a fixed height for each item */
+    min-width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out; /* Smooth transition for sliding effect */
     overflow-y: auto; /* Allow vertical scrolling if content exceeds height */
-    white-space: normal; /* Allow text to wrap */
-    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    position: absolute;
+    top: 0;
+    left: 0;
   }}
   
   .scrollable-content {{
     background-color: #f0f0f0;
     padding: 10px;
     border-radius: 5px;
+    box-sizing: border-box; /* Include padding and border in the element's total width and height */
+    height: 100%;
+    overflow-y: auto; /* Enable vertical scrolling */
   }}
   </style>
   
@@ -358,28 +362,14 @@ scrollable_content = f"""
 # Render the scrollable content using st.markdown
 st.markdown(scrollable_content, unsafe_allow_html=True)
 
+# Buttons to navigate sections
 col1, col2 = st.columns([1, 1])
 with col1:
+    st.write("")  # Placeholder to enforce button on the left side
     if st.button("Previous <"):
         prev_section()
 
 with col2:
+    st.write("")  # Placeholder to enforce button on the right side
     if st.button("Next >"):
         next_section()
-
-# CSS to ensure buttons are side by side in mobile view
-st.markdown(
-    """
-    <style>
-        @media (max-width: 600px) {
-            .streamlit-container .element-container {
-                display: flex;
-                flex-direction: row;
-                justify-content: space-between;
-                align-items: center;
-            }
-        }
-    </style>
-    """,
-    unsafe_allow_html=True
-)
