@@ -310,20 +310,20 @@ scrollable_content = f"""
   <style>
   .scrollable-container {{
     display: flex;
-    width: 400px; /* Adjust to the width of one section */
+    overflow: hidden;
+    width: 395px; /* Adjust to the width of one section */
     height: 400px; /* Adjust to the height of one section */
-    overflow-x: auto;
-    white-space: nowrap;
     position: relative;
   }}
   
   .scrollable-item {{
     min-width: 100%;
+    max-width: 100%; /* Ensure items don't exceed container width */
     height: 100%;
-    margin-right: 10px; /* Adjust margin between items */
     transition: transform 0.5s ease-in-out; /* Smooth transition for sliding effect */
-    overflow-y: auto; /* Allow vertical scrolling if content exceeds height */
     position: absolute;
+    top: 0;
+    left: 0;
   }}
   
   .scrollable-content {{
@@ -332,10 +332,8 @@ scrollable_content = f"""
     border-radius: 5px;
     box-sizing: border-box; /* Include padding and border in the element's total width and height */
     height: 100%;
-    margin-right: 15px; /* Adjust margin between items */
+    margin-right: 10px; /* Adjust margin between items */
     overflow-y: auto; /* Enable vertical scrolling */
-    white-space: normal; /* Allow text to wrap */
-
   }}
   </style>
   
