@@ -311,7 +311,7 @@ scrollable_content = f"""
   .scrollable-container {{
     display: flex;
     overflow: hidden;
-    width: 344px; /* Adjust to the width of one section */
+    width: 350px; /* Adjust to the width of one section */
     height: 400px; /* Adjust to the height of one section */
     position: relative;
   }}
