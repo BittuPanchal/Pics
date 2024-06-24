@@ -332,6 +332,7 @@ scrollable_content = f"""
     border-radius: 5px;
     box-sizing: border-box; /* Include padding and border in the element's total width and height */
     height: 100%;
+    margin-right: 15px; /* Adjust margin between items */
     overflow-y: auto; /* Enable vertical scrolling */
     white-space: normal; /* Allow text to wrap */
 
@@ -367,12 +368,31 @@ st.markdown(scrollable_content, unsafe_allow_html=True)
 # Buttons to navigate sections
 col1, col2 = st.columns([1, 1])
 
-with col1:
-    st.write("")  # Placeholder to enforce button on the left side
-    if st.button("Previous <"):
-        prev_section()
+# Apply CSS to ensure buttons are displayed side by side
+st.markdown("""
+    <style>
+        .stHorizontal {
+            display: flex;
+            justify-content: space-between;
+        }
+        .stHorizontal .stButton {
+            flex: 1;
+            margin: 0 5px;
+        }
+    </style>
+""", unsafe_allow_html=True)
 
-with col2:
-    st.write("")  # Placeholder to enforce button on the right side
-    if st.button("Next >"):
-        next_section()
+# Use a div with class stHorizontal to wrap buttons
+with st.markdown("<div class='stHorizontal'>", unsafe_allow_html=True):
+    with col1:
+        st.write("")  # Placeholder to enforce button on the left side
+        if st.button("Previous <"):
+            prev_section()
+
+    with col2:
+        st.write("")  # Placeholder to enforce button on the right side
+        if st.button("Next >"):
+            next_section()
+
+# Close the div
+st.markdown("</div>", unsafe_allow_html=True)
